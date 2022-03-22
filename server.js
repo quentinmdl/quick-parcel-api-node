@@ -6,7 +6,7 @@ server.use(express.json());
 server.use(express.urlencoded({limit: "50mb", extended: true, parameterLimit:500000}));
 
 // Import Controllers
-const constroller = require("./routes/controller");
+const controller = require("./routes/controllerName");
 
 // Configure Routes
 server.get("/", function (req, res) {
@@ -14,7 +14,7 @@ server.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "./public", "index.html"));
 });
 
-server.use("/api/controller", controller);
+server.use("/api/controllerRouteName", controller);
 
 
 // Listening 
